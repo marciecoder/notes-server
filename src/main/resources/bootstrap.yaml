@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:8200}
+spring:
+  application:
+    name: "notes"
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
+  data:
+    cassandra:
+      keyspace-name: notes
+      port: 9042
